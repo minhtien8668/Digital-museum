@@ -2,262 +2,153 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Nebamun Receiving Wine - Digital Museum</title>
 
     <link rel="stylesheet" href="style.css">
 
-
     <style>
 
         .artwork-page {
-
             max-width: 1100px;
-
             margin: 0 auto;
-
-            padding: 70px 30px 100px;
-
-            text-align: center;
-
-            animation: artworkAppear 1s ease;
-
+            padding: 120px 30px 80px;
         }
-
 
         .artwork-label {
-
-            color: #b49a76;
-
+            color: #a98a5e;
             font-size: 11px;
-
-            letter-spacing: 5px;
-
-            margin-bottom: 20px;
-
+            letter-spacing: 4px;
+            margin-bottom: 18px;
         }
 
-
-        .artwork-page h1 {
-
-            margin: 0;
-
+        .artwork-title {
             color: #eee5d8;
-
-            font-size: clamp(40px, 6vw, 70px);
-
-            font-weight: 400;
-
-            letter-spacing: 5px;
-
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 52px;
+            font-weight: normal;
+            letter-spacing: 3px;
+            margin-bottom: 45px;
         }
 
-
-        .artwork-line {
-
-            width: 55px;
-
-            height: 1px;
-
-            margin: 30px auto 45px;
-
-            background: #a98a5e;
-
-        }
-
-
-        .artwork-frame {
-
-            max-width: 720px;
-
-            margin: 0 auto;
-
-            padding: 12px;
-
-            background: #17130f;
-
-            border: 1px solid rgba(200,170,123,.25);
-
-            box-shadow:
-                0 25px 60px rgba(0,0,0,.45);
-
-        }
-
-
-        .artwork-frame img {
-
-            display: block;
-
+        .artwork-image {
             width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
+        .artwork-image img {
+            width: 100%;
+            max-width: 1000px;
             height: auto;
-
+            display: block;
+            margin: 0 auto;
         }
 
+        .artwork-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 25px 0;
+            border-top:
+                1px solid rgba(200, 170, 123, 0.18);
+            border-bottom:
+                1px solid rgba(200, 170, 123, 0.18);
+            margin-bottom: 45px;
+        }
 
-        .artwork-information {
-
-            margin-top: 30px;
-
-            color: #8f867a;
-
+        .artwork-info div {
+            color: #d8cbbb;
             font-size: 13px;
-
-            line-height: 1.8;
-
-            letter-spacing: 1px;
-
+            letter-spacing: 2px;
         }
 
+        .artwork-info span {
+            display: block;
+            color: #756d63;
+            font-size: 11px;
+            margin-top: 8px;
+            letter-spacing: 1px;
+        }
 
         .artwork-description {
-
-            max-width: 720px;
-
-            margin: 65px auto 0;
-
-            padding-top: 35px;
-
-            border-top:
-                1px solid rgba(200,170,123,.15);
-
-            text-align: left;
-
+            max-width: 750px;
+            margin-bottom: 70px;
         }
-
 
         .artwork-description h2 {
-
-            margin: 0 0 20px;
-
-            color: #b49a76;
-
+            color: #a98a5e;
             font-size: 11px;
-
+            font-weight: normal;
             letter-spacing: 4px;
-
-            font-weight: 400;
-
+            margin-bottom: 20px;
         }
-
 
         .artwork-description p {
-
-            margin: 0;
-
-            color: #9b9287;
-
-            font-size: 15px;
-
+            color: #aaa198;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 17px;
             line-height: 1.9;
-
         }
-
 
         .artwork-navigation {
-
             display: flex;
-
-            justify-content: center;
-
-            gap: 25px;
-
-            margin-top: 60px;
-
-            flex-wrap: wrap;
-
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
         }
-
 
         .artwork-navigation a {
-
-            display: inline-block;
-
-            padding: 13px 22px;
-
-            border: 1px solid rgba(200,170,123,.25);
-
-            color: #aaa094;
-
+            color: #82796f;
             text-decoration: none;
-
             font-size: 11px;
-
             letter-spacing: 2px;
-
-            transition:
-                .4s ease;
-
+            transition: 0.4s ease;
         }
-
 
         .artwork-navigation a:hover {
-
             color: #eee5d8;
-
-            border-color: #a98a5e;
-
-            transform: translateY(-3px);
-
         }
 
-
-        @keyframes artworkAppear {
-
-            from {
-
-                opacity: 0;
-
-                transform: translateY(20px);
-
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform: translateY(0);
-
-            }
-
+        .back-gallery {
+            color: #a98a5e !important;
         }
-
 
         @media (max-width: 700px) {
 
             .artwork-page {
-
                 padding:
-                    55px 20px 80px;
-
+                    100px 20px 60px;
             }
 
-
-            .artwork-page h1 {
-
-                letter-spacing: 3px;
-
+            .artwork-title {
+                font-size: 34px;
+                letter-spacing: 2px;
             }
 
-
-            .artwork-description {
-
-                margin-top: 50px;
-
+            .artwork-info {
+                display: block;
             }
 
+            .artwork-info div {
+                margin-bottom: 18px;
+            }
+
+            .artwork-description p {
+                font-size: 15px;
+            }
 
             .artwork-navigation {
-
-                gap: 12px;
-
+                flex-direction: column;
+                align-items: flex-start;
             }
 
         }
@@ -266,24 +157,103 @@
 
 </head>
 
-
 <body>
 
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="museum.html" class="active">GALLERY</a>
+    <a href="about.html">ABOUT</a>
+</nav>
 
-    <!-- =========================
-         NAVIGATION
-         ========================= -->
 
-    <nav>
+<main class="artwork-page">
+
+    <div class="artwork-label">
+        ANCIENT MASTERPIECE
+    </div>
+
+
+    <h1 class="artwork-title">
+        NEBAMUN RECEIVING WINE
+    </h1>
+
+
+    <div class="artwork-image">
+
+        <img
+            src="painting2.jpg"
+            alt="Nebamun Receiving Wine"
+        >
+
+    </div>
+
+
+    <div class="artwork-info">
+
+        <div>
+            Ancient Egyptian Art
+            <span>18th Dynasty</span>
+        </div>
+
+        <div>
+            Ancient Egypt
+            <span>Tomb of Nebamun</span>
+        </div>
+
+    </div>
+
+
+    <section class="artwork-description">
+
+        <h2>
+            ABOUT THE ARTWORK
+        </h2>
+
+        <p>
+            Nebamun Receiving Wine is an ancient Egyptian
+            wall painting from the 18th Dynasty. The artwork
+            presents Nebamun in an elegant setting surrounded
+            by servants, plants, and offerings. Its detailed
+            figures and carefully arranged composition provide
+            an insight into the artistic traditions and
+            cultural life of ancient Egypt.
+        </p>
+
+    </section>
+
+
+    <div class="artwork-navigation">
+
+        <a href="painting1.html">
+            ← PREVIOUS
+        </a>
+
+        <a href="museum.html">
+            BACK TO GALLERY
+        </a>
+
+        <a href="painting3.html">
+            NEXT →
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-title">
+        DIGITAL MUSEUM
+    </div>
+
+    <div class="footer-links">
 
         <a href="index.html">
             HOME
         </a>
 
-        <a
-            href="museum.html"
-            class="active"
-        >
+        <a href="museum.html">
             GALLERY
         </a>
 
@@ -291,137 +261,15 @@
             ABOUT
         </a>
 
-    </nav>
+    </div>
 
+    <div class="footer-line"></div>
 
-    <!-- =========================
-         ARTWORK
-         ========================= -->
+    <div class="footer-copy">
+        © 2026 DIGITAL MUSEUM
+    </div>
 
-    <main class="artwork-page">
-
-
-        <div class="artwork-label">
-            ANCIENT MASTERPIECE
-        </div>
-
-
-        <h1>
-            NEBAMUN RECEIVING WINE
-        </h1>
-
-
-        <div class="artwork-line"></div>
-
-
-        <div class="artwork-frame">
-
-            <img
-                src="images/painting2.jpg"
-                alt="Nebamun Receiving Wine"
-            >
-
-        </div>
-
-
-        <div class="artwork-information">
-
-            Ancient Egyptian Art · 18th Dynasty
-            <br>
-            Ancient Egypt
-
-        </div>
-
-
-        <!-- =========================
-             DESCRIPTION
-             ========================= -->
-
-        <section class="artwork-description">
-
-            <h2>
-                ABOUT THE ARTWORK
-            </h2>
-
-
-            <p>
-
-                Nebamun Receiving Wine is an example
-                of ancient Egyptian art from the 18th Dynasty.
-                The scene presents Nebamun in an elegant setting,
-                surrounded by figures and objects associated
-                with daily life and celebration.
-
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             NAVIGATION
-             ========================= -->
-
-        <div class="artwork-navigation">
-
-
-            <a href="painting1.html">
-                ← PREVIOUS
-            </a>
-
-
-            <a href="museum.html">
-                BACK TO GALLERY
-            </a>
-
-
-            <a href="painting3.html">
-                NEXT →
-            </a>
-
-
-        </div>
-
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
-
-    <footer class="site-footer">
-
-        <div class="footer-title">
-            DIGITAL MUSEUM
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="index.html">
-                HOME
-            </a>
-
-            <a href="museum.html">
-                GALLERY
-            </a>
-
-            <a href="about.html">
-                ABOUT
-            </a>
-
-        </div>
-
-
-        <div class="footer-line"></div>
-
-
-        <div class="footer-copy">
-            © 2026 DIGITAL MUSEUM
-        </div>
-
-    </footer>
-
+</footer>
 
 </body>
 
