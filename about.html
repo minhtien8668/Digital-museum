@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About - Digital Museum</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        .about-page {
+
+            max-width: 950px;
+
+            margin: 0 auto;
+
+            padding: 80px 30px 120px;
+
+            text-align: center;
+
+            animation: aboutAppear 1s ease;
+
+        }
+
+
+        .about-label {
+
+            color: #b49a76;
+
+            font-size: 12px;
+
+            letter-spacing: 6px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .about-page h1 {
+
+            margin: 0;
+
+            color: #f1e8da;
+
+            font-size: clamp(45px, 7vw, 78px);
+
+            font-weight: 400;
+
+            letter-spacing: 7px;
+
+        }
+
+
+        .about-line {
+
+            width: 65px;
+
+            height: 1px;
+
+            margin: 30px auto 45px;
+
+            background: #a98a5e;
+
+        }
+
+
+        .about-intro {
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            color: #b5aa9c;
+
+            font-size: 18px;
+
+            line-height: 2;
+
+            letter-spacing: .3px;
+
+        }
+
+
+        .about-cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 70px;
+
+        }
+
+
+        .about-card {
+
+            padding: 35px 25px;
+
+            border: 1px solid rgba(200,170,123,.18);
+
+            background: rgba(20,16,12,.45);
+
+            transition:
+                transform .4s ease,
+                border-color .4s ease,
+                background .4s ease;
+
+        }
+
+
+        .about-card:hover {
+
+            transform: translateY(-6px);
+
+            border-color: rgba(200,170,123,.5);
+
+            background: rgba(35,27,20,.65);
+
+        }
+
+
+        .about-card-number {
+
+            color: #c8aa7b;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about-card h2 {
+
+            margin: 0 0 12px;
+
+            color: #eee5d8;
+
+            font-size: 19px;
+
+            font-weight: 400;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .about-card p {
+
+            margin: 0;
+
+            color: #8f867a;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .philosophy {
+
+            max-width: 720px;
+
+            margin: 110px auto 0;
+
+            padding-top: 55px;
+
+            border-top:
+                1px solid rgba(200,170,123,.15);
+
+        }
+
+
+        .philosophy-label {
+
+            color: #b49a76;
+
+            font-size: 11px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .philosophy h2 {
+
+            margin: 0;
+
+            color: #eee5d8;
+
+            font-size: clamp(28px, 4vw, 45px);
+
+            font-weight: 400;
+
+            line-height: 1.35;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .philosophy-line {
+
+            width: 45px;
+
+            height: 1px;
+
+            margin: 30px auto;
+
+            background: #a98a5e;
+
+        }
+
+
+        .philosophy p {
+
+            max-width: 600px;
+
+            margin: 0 auto;
+
+            color: #81786d;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .about-quote {
+
+            margin: 80px auto 0;
+
+            max-width: 650px;
+
+            padding-top: 35px;
+
+            border-top:
+                1px solid rgba(200,170,123,.15);
+
+            color: #81786d;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            letter-spacing: 1px;
+
+            font-style: italic;
+
+        }
+
+
+        @keyframes aboutAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .about-page {
+
+                padding-top: 55px;
+
+            }
+
+
+            .about-page h1 {
+
+                letter-spacing: 4px;
+
+            }
+
+
+            .about-cards {
+
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+
+                margin-top: 50px;
+
+            }
+
+
+            .about-intro {
+
+                font-size: 16px;
+
+            }
+
+
+            .philosophy {
+
+                margin-top: 80px;
+
+                padding-top: 40px;
+
+            }
+
+
+            .philosophy h2 {
+
+                font-size: 28px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="museum.html">
+            GALLERY
+        </a>
+
+        <a
+            href="about.html"
+            class="active"
+        >
+            ABOUT
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         ABOUT
+         ========================= -->
+
+    <main class="about-page">
+
+
+        <div class="about-label">
+            THE MUSEUM
+        </div>
+
+
+        <h1>
+            ABOUT DIGITAL MUSEUM
+        </h1>
+
+
+        <div class="about-line"></div>
+
+
+        <p class="about-intro">
+
+            Digital Museum is an online space created
+            to bring artworks from different periods
+            and cultures together in a simple
+            virtual environment.
+
+            <br><br>
+
+            Explore masterpieces, discover their stories,
+            and experience art beyond the walls of a
+            traditional museum.
+
+        </p>
+
+
+        <!-- =========================
+             PRINCIPLES
+             ========================= -->
+
+        <section class="about-cards">
+
+
+            <div class="about-card">
+
+                <div class="about-card-number">
+                    01
+                </div>
+
+                <h2>
+                    EXPLORE
+                </h2>
+
+                <p>
+                    Discover artworks from different eras,
+                    cultures and artistic traditions.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-card-number">
+                    02
+                </div>
+
+                <h2>
+                    DISCOVER
+                </h2>
+
+                <p>
+                    Learn about the artists, history
+                    and stories behind each masterpiece.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-card-number">
+                    03
+                </div>
+
+                <h2>
+                    EXPERIENCE
+                </h2>
+
+                <p>
+                    Experience a quiet digital gallery
+                    designed around the artwork itself.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             PHILOSOPHY
+             ========================= -->
+
+        <section class="philosophy">
+
+
+            <div class="philosophy-label">
+                OUR PHILOSOPHY
+            </div>
+
+
+            <h2>
+
+                Art does not simply belong
+                to the past.
+
+                <br>
+
+                It continues to change
+                the way we see the world.
+
+            </h2>
+
+
+            <div class="philosophy-line"></div>
+
+
+            <p>
+
+                Digital Museum aims to create a quiet
+                space where visitors can slow down,
+                explore artworks and discover new
+                perspectives through art.
+
+            </p>
+
+
+        </section>
+
+
+        <div class="about-quote">
+
+            “Art allows us to see the world
+            through another perspective.”
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-title">
+            DIGITAL MUSEUM
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="museum.html">
+                GALLERY
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+        </div>
+
+
+        <div class="footer-line"></div>
+
+
+        <div class="footer-copy">
+            © 2026 DIGITAL MUSEUM
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

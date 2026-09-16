@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The Starry Night - Digital Museum</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        .artwork-page {
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 70px 30px 100px;
+
+            text-align: center;
+
+            animation: artworkAppear 1s ease;
+
+        }
+
+
+        .artwork-label {
+
+            color: #b49a76;
+
+            font-size: 11px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .artwork-page h1 {
+
+            margin: 0;
+
+            color: #eee5d8;
+
+            font-size: clamp(40px, 6vw, 70px);
+
+            font-weight: 400;
+
+            letter-spacing: 5px;
+
+        }
+
+
+        .artwork-line {
+
+            width: 55px;
+
+            height: 1px;
+
+            margin: 30px auto 45px;
+
+            background: #a98a5e;
+
+        }
+
+
+        .artwork-frame {
+
+            max-width: 720px;
+
+            margin: 0 auto;
+
+            padding: 12px;
+
+            background: #17130f;
+
+            border: 1px solid rgba(200,170,123,.25);
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,.45);
+
+        }
+
+
+        .artwork-frame img {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+        }
+
+
+        .artwork-information {
+
+            margin-top: 30px;
+
+            color: #8f867a;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .artwork-description {
+
+            max-width: 720px;
+
+            margin: 65px auto 0;
+
+            padding-top: 35px;
+
+            border-top:
+                1px solid rgba(200,170,123,.15);
+
+            text-align: left;
+
+        }
+
+
+        .artwork-description h2 {
+
+            margin: 0 0 20px;
+
+            color: #b49a76;
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+
+            font-weight: 400;
+
+        }
+
+
+        .artwork-description p {
+
+            margin: 0;
+
+            color: #9b9287;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .artwork-navigation {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            margin-top: 60px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .artwork-navigation a {
+
+            display: inline-block;
+
+            padding: 13px 22px;
+
+            border: 1px solid rgba(200,170,123,.25);
+
+            color: #aaa094;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            transition:
+                .4s ease;
+
+        }
+
+
+        .artwork-navigation a:hover {
+
+            color: #eee5d8;
+
+            border-color: #a98a5e;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        @keyframes artworkAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .artwork-page {
+
+                padding:
+                    55px 20px 80px;
+
+            }
+
+
+            .artwork-page h1 {
+
+                letter-spacing: 3px;
+
+            }
+
+
+            .artwork-description {
+
+                margin-top: 50px;
+
+            }
+
+
+            .artwork-navigation {
+
+                gap: 12px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a
+            href="museum.html"
+            class="active"
+        >
+            GALLERY
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         ARTWORK
+         ========================= -->
+
+    <main class="artwork-page">
+
+
+        <div class="artwork-label">
+            MASTERPIECE
+        </div>
+
+
+        <h1>
+            THE STARRY NIGHT
+        </h1>
+
+
+        <div class="artwork-line"></div>
+
+
+        <div class="artwork-frame">
+
+            <img
+                src="images/painting1.jpg"
+                alt="The Starry Night"
+            >
+
+        </div>
+
+
+        <div class="artwork-information">
+
+            Vincent van Gogh · 1889
+            <br>
+            Oil on canvas
+
+        </div>
+
+
+        <!-- =========================
+             DESCRIPTION
+             ========================= -->
+
+        <section class="artwork-description">
+
+            <h2>
+                ABOUT THE ARTWORK
+            </h2>
+
+
+            <p>
+
+                The Starry Night is one of
+                Vincent van Gogh's most recognized
+                paintings. Created in 1889, the work
+                presents a night sky filled with
+                swirling movement above a quiet village.
+
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             NAVIGATION
+             ========================= -->
+
+        <div class="artwork-navigation">
+
+
+            <a href="museum.html">
+                ← BACK TO GALLERY
+            </a>
+
+
+            <a href="painting2.html">
+                NEXT →
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-title">
+            DIGITAL MUSEUM
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="museum.html">
+                GALLERY
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+        </div>
+
+
+        <div class="footer-line"></div>
+
+
+        <div class="footer-copy">
+            © 2026 DIGITAL MUSEUM
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

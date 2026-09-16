@@ -1,0 +1,1075 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            ellipse at 50% 20%,
+            #30251b 0%,
+            #17120e 30%,
+            #090807 65%,
+            #030303 100%
+        );
+    color: #eee5d8;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    border-bottom: 1px solid rgba(220, 190, 150, 0.15);
+    background: rgba(5, 4, 3, 0.65);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    position: relative;
+    color: #d8cec0;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 4px;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+/* =========================
+   HOME
+   ========================= */
+
+.hero {
+    min-height: calc(100vh - 88px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(130, 90, 45, 0.18) 0%,
+            rgba(20, 15, 10, 0.4) 35%,
+            #050505 75%
+        );
+}
+
+.hero-content {
+    transform: translateY(-20px);
+}
+
+.hero-small {
+    margin: 0 0 20px;
+
+    color: #b49a76;
+
+    font-size: 13px;
+
+    letter-spacing: 7px;
+}
+
+.hero h1 {
+    margin: 0;
+
+    color: #f1e8da;
+
+    font-size: clamp(65px, 9vw, 120px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: 12px;
+
+    text-shadow:
+        0 0 40px rgba(255, 220, 170, 0.08);
+}
+
+.hero-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 35px auto 25px;
+
+    background: #a98a5e;
+}
+
+.hero-description {
+    margin: 0 0 40px;
+
+    color: #968c80;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+}
+
+.hero a {
+    text-decoration: none;
+}
+
+.hero button {
+    padding: 16px 42px;
+
+    background: transparent;
+
+    color: #e9dfd1;
+
+    border: 1px solid #887457;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.hero button:hover {
+    background: #e9dfd1;
+
+    color: #111;
+
+    border-color: #e9dfd1;
+
+    box-shadow:
+        0 0 30px rgba(220, 190, 140, 0.15);
+}
+
+
+/* =========================
+   GALLERY HEADER
+   ========================= */
+
+.gallery-header {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.gallery-header h1 {
+    margin: 0;
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    letter-spacing: 8px;
+}
+
+.gallery-header p {
+    margin-top: 18px;
+
+    color: #9f968a;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   GALLERY
+   ========================= */
+
+.gallery-grid {
+    width: 760px;
+    max-width: 85%;
+
+    margin: 55px auto 100px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+}
+
+
+/* =========================
+   ART CARD
+   ========================= */
+
+.art-card {
+    display: block;
+
+    color: #eee5d8;
+
+    text-decoration: none;
+}
+
+.art-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111;
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.75),
+        0 0 30px rgba(170, 120, 60, 0.08);
+}
+
+.art-card img {
+    width: 100%;
+
+    aspect-ratio: 1.4 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.6s;
+}
+
+.art-card:hover img {
+    transform: scale(1.035);
+
+    filter: brightness(1.08);
+}
+
+
+/* =========================
+   ART DETAILS
+   ========================= */
+
+.art-details {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    padding-top: 18px;
+}
+
+.art-details h2 {
+    margin: 0 0 7px;
+
+    font-size: 20px;
+
+    font-weight: 400;
+}
+
+.art-details p {
+    margin: 0 0 7px;
+
+    color: #a49a8d;
+
+    font-size: 14px;
+}
+
+.art-details span {
+    color: #81786d;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+.arrow {
+    color: #c8aa7b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 23px;
+
+    transition: 0.4s;
+}
+
+.art-card:hover .arrow {
+    transform: translateX(7px);
+}
+
+
+/* =========================
+   ARTWORK DETAIL PAGE
+   ========================= */
+
+.gallery-title {
+    text-align: center;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    letter-spacing: 7px;
+
+    margin: 60px 20px 20px;
+}
+
+.gallery-art {
+    display: block;
+
+    width: 600px;
+    max-width: 80%;
+
+    margin: 55px auto 30px;
+
+    border: 10px solid #181411;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.85);
+
+    transition: 0.5s;
+}
+
+.gallery-art:hover {
+    transform: scale(1.015);
+}
+
+.art-info {
+    text-align: center;
+
+    margin-bottom: 80px;
+}
+
+.art-info h2 {
+    font-size: 26px;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+.art-info p {
+    color: #91887c;
+
+    font-size: 15px;
+
+    margin: 7px;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about {
+    max-width: 700px;
+
+    margin: 90px auto;
+
+    padding: 0 25px;
+
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 48px;
+
+    font-weight: 400;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 40px;
+}
+
+.about p {
+    color: #a49a8d;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        gap: 25px;
+    }
+
+    nav a {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+
+        letter-spacing: 5px;
+    }
+
+    .gallery-header h1 {
+        font-size: 45px;
+    }
+
+    .gallery-grid {
+        width: 85%;
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .gallery-title {
+        font-size: 38px;
+    }
+
+    .gallery-art {
+        width: 85%;
+    }
+}
+/* =========================
+   LOADING SCREEN
+   ========================= */
+
+.loading-screen {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #30251b 0%,
+            #110e0b 45%,
+            #030303 100%
+        );
+
+    animation: loadingExit 0.8s ease 2s forwards;
+}
+
+.loading-content {
+    text-align: center;
+
+    animation: loadingAppear 1.2s ease;
+}
+
+.loading-title {
+    color: #eee5d8;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 38px;
+
+    letter-spacing: 9px;
+
+    font-weight: 400;
+}
+
+.loading-line {
+    width: 0;
+
+    height: 1px;
+
+    margin: 25px auto 0;
+
+    background: #b99a6a;
+
+    animation: loadingLine 1.5s ease 0.2s forwards;
+}
+
+
+/* CHỮ HIỆN RA */
+
+@keyframes loadingAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ĐƯỜNG KẺ CHẠY RA */
+
+@keyframes loadingLine {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120px;
+    }
+}
+
+
+/* MÀN HÌNH BIẾN MẤT */
+
+@keyframes loadingExit {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+/* =========================
+   ARTWORK HOVER INFORMATION
+   ========================= */
+
+.art-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.art-card img {
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+
+/* KHUNG THÔNG TIN */
+
+.art-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px 25px 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 4, 3, 0.95),
+            rgba(5, 4, 3, 0.65),
+            transparent
+        );
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+
+/* CHỮ */
+
+.overlay-info h2 {
+    margin: 0 0 7px;
+
+    color: #f1e8da;
+
+    font-size: 20px;
+
+    font-weight: 400;
+}
+
+.overlay-info p {
+    margin: 0 0 6px;
+
+    color: #c2b5a5;
+
+    font-size: 14px;
+}
+
+.overlay-info span {
+    color: #91877a;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* MŨI TÊN */
+
+.overlay-arrow {
+    color: #c8aa7b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 28px;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* HOVER */
+
+.art-card:hover img {
+    transform: scale(1.05);
+
+    filter:
+        brightness(0.68);
+}
+
+.art-card:hover .art-overlay {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.art-card:hover .overlay-arrow {
+    transform: translateX(8px);
+}
+/* =========================
+   ACTIVE NAVIGATION
+   ========================= */
+
+nav a.active {
+    color: #ffffff;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -31px;
+
+    transform: translateX(-50%);
+
+    width: 55px;
+    height: 1px;
+
+    background: #c8aa7b;
+
+    box-shadow:
+        0 0 8px rgba(200, 170, 123, 0.35);
+}
+/* =========================
+   PREMIUM GALLERY HOVER
+   ========================= */
+
+.art-image {
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+.art-card:hover .art-image {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.9),
+        0 0 35px rgba(170, 120, 60, 0.12);
+}
+
+.art-card:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(0.58);
+}
+
+.art-overlay {
+    padding: 30px 28px 25px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 3, 3, 0.98) 0%,
+            rgba(3, 3, 3, 0.72) 45%,
+            transparent 100%
+        );
+
+    transform: translateY(30px);
+}
+
+.art-card:hover .art-overlay {
+    transform: translateY(0);
+}
+
+.overlay-info h2 {
+    letter-spacing: 0.5px;
+}
+
+.overlay-arrow {
+    font-size: 30px;
+
+    opacity: 0.8;
+}
+
+.art-card:hover .overlay-arrow {
+    transform: translateX(10px);
+    opacity: 1;
+}
+/* =========================
+   GALLERY CATALOGUE
+   ========================= */
+
+.gallery-label {
+    color: #a98a5e;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.art-number {
+    margin-bottom: 12px;
+
+    color: #70675d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.art-caption {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    gap: 15px;
+
+    padding-top: 16px;
+}
+
+
+.art-caption div {
+    color: #ddd3c5;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+
+.art-caption span {
+    color: #756d63;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.art-card:hover .art-number {
+    color: #c8aa7b;
+}
+
+
+.art-card:hover .art-caption div {
+    color: #f1e8da;
+}
+
+
+.art-caption,
+.art-number {
+    transition: color 0.4s ease;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .gallery-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .art-caption {
+        display: block;
+    }
+
+    .art-caption div {
+        font-size: 12px;
+
+        margin-bottom: 6px;
+    }
+
+    .art-caption span {
+        font-size: 11px;
+    }
+
+}
+/* =========================
+   SMOOTH PAGE TRANSITION
+   ========================= */
+
+body {
+    animation: pageEnter 0.8s ease;
+}
+
+@keyframes pageEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   LINK PAGE EXIT
+   ========================= */
+
+a {
+    transition:
+        color 0.4s ease,
+        opacity 0.4s ease;
+}
+/* =========================
+   GALLERY FOCUS EFFECT
+   ========================= */
+
+.gallery-grid {
+    transition: 0.5s ease;
+}
+
+
+/* Khi rê vào gallery */
+
+.gallery-grid:has(.art-card:hover) .art-card {
+    opacity: 0.38;
+
+    filter: brightness(0.7);
+
+    transition:
+        opacity 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* Tranh đang được rê vào */
+
+.gallery-grid:has(.art-card:hover) .art-card:hover {
+    opacity: 1;
+
+    filter: brightness(1);
+
+    transform: translateY(-8px);
+}
+
+
+/* Giữ hiệu ứng mượt */
+
+.art-card {
+    transition:
+        opacity 0.5s ease,
+        filter 0.5s ease,
+        transform 0.5s ease;
+}
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+    margin-top: 80px;
+
+    padding: 55px 30px 35px;
+
+    border-top:
+        1px solid rgba(200, 170, 123, 0.15);
+
+    background:
+        rgba(3, 3, 3, 0.55);
+
+    text-align: center;
+}
+
+
+.footer-title {
+    color: #eee5d8;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.footer-links a {
+    color: #81786d;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: 0.4s ease;
+}
+
+
+.footer-links a:hover {
+    color: #e9dfd1;
+}
+
+
+.footer-line {
+    width: 45px;
+
+    height: 1px;
+
+    margin: 0 auto 25px;
+
+    background: #a98a5e;
+}
+
+
+.footer-copy {
+    color: #5f5952;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   FOOTER MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+        padding:
+            45px 20px 30px;
+    }
+
+
+    .footer-links {
+        gap: 18px;
+    }
+
+
+    .footer-links a {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+}
+/* =========================
+   CUSTOM SCROLLBAR
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Chrome / Safari / Edge */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #080706;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #4f463b;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a98a5e;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+   ========================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+
+.scroll-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
